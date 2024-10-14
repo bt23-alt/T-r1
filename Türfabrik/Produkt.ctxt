@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Produkt
+comment0.text=\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ Produkt.\n\ Die\ Klasse\ Produkt\ gibt\ an,\ um\ welches\ Produkt\ es\ sich\ handelt\ -\ Premium-\ oder\ Standardt\u00FCr.\ \n\ Die\ Klasse\ hat\ Methoden,\ um\ den\ aktuellen\ Zustand\ des\ Produktes\ abzufragen\ und\n\ den\ Zustand\ eines\ Produktes\ zu\ \u00E4ndern.\n\ @Gruppe\ 08\n\ @version\ 1.0\n
+comment1.params=derZustand
+comment1.target=Produkt(int)
+comment1.text=\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Produkt\n
+comment2.params=neuerZustand
+comment2.target=void\ zustandAendern(int)
+comment2.text=\n\ Diese\ Methode\ \u00E4ndert\ den\ Zustand\ des\ Produkts.\n
+comment3.params=
+comment3.target=int\ aktuellerZustand()
+comment3.text=\n\ Diese\ Methode\ gibt\ den\ aktuellen\ Zustand\ des\ Produkts\ zur\u00FCck.\n
+numComments=4

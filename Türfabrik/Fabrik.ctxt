@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=Fabrik
+comment0.text=\n\ In\ der\ Fabrik\ werden\ Bestellungen\ abgearbeitet.\ Hier\ wird\ das\ Programm\ gestartet.\n\ @Gruppe\ 08\ \n\ @version\ 1.0\n
+comment1.params=
+comment1.target=Fabrik()
+comment1.text=\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Fabrik\n
+comment2.params=standardTueren\ premiumTueren
+comment2.target=void\ bestellungAufgeben(int,\ int)
+comment2.text=\n\ Ein\ Beispiel\ einer\ Methode\ -\ ersetzen\ Sie\ diesen\ Kommentar\ mit\ Ihrem\ eigenen\n
+comment3.params=
+comment3.target=void\ bestellungAusgeben()
+comment4.params=args
+comment4.target=void\ main(java.lang.String[])
+numComments=5
