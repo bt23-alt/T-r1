@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Produkt
-comment0.text=\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ Produkt.\n\ Die\ Klasse\ Produkt\ gibt\ an,\ um\ welches\ Produkt\ es\ sich\ handelt\ -\ Premium-\ oder\ Standardt\u00FCr.\ \n\ Die\ Klasse\ hat\ Methoden,\ um\ den\ aktuellen\ Zustand\ des\ Produktes\ abzufragen\ und\n\ den\ Zustand\ eines\ Produktes\ zu\ \u00E4ndern.\n\ @Gruppe\ 08\n\ @version\ 1.0\n
+comment0.text=\n\ Die\ Klasse\ Produkt\ enth\u00E4lt\ Methoden,\ um\ den\ aktuellen\ Zustand\ des\ Produktes\ abzufragen\ \n\ und\ den\ Zustand\ eines\ Produktes\ zu\ \u00E4ndern.\n\ @author\ Gruppe\ 08\n\ @version\ 1.0\n
 comment1.params=derZustand
 comment1.target=Produkt(int)
 comment1.text=\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Produkt\n

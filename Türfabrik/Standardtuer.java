@@ -1,101 +1,85 @@
 
 /**
- * Beschreiben Sie hier die Klasse Standardtür.
- * Die Klasse Standardtür gibt an, welche Spezifikationen die Standardtür hat. 
- * Und sie hat die Get-Methoden, um diese Variablen abzufragen.
- * @Gruppe 08
+ * Die Klasse Standardtuer gibt an, welche Spezifikationen die Standardtür hat. 
+ * Zudem hat die Klasse die Get-Methoden, um diese Variablen abzufragen.
+ * @author Gruppe 08
  * @version 1.0
  */
 public class Standardtuer extends Produkt
 {
-    // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
-    private int holzeinheiten;
-    private int schrauben;
-    private int farbeinheiten;
-    private int kartoneinheiten;
-    private int produktionsZeit;
-
+    // Die Instanzvariablen geben die Produktspezifikationen der Standardtuer an.
+    private static final int HOLZEINHEITEN = 2;
+    private static final int SCHRAUBEN = 10;
+    private static final int FARBEINHEITEN = 2;
+    private static final int KARTONEINHEITEN = 1;
+    private static final int PRODUKTIONSZEIT = 10;
+    
     /**
-     * Konstruktor für Objekte der Klasse Premiumtuer, wo die Spezifikationen individuell angepasst werden können.
+     * Konstruktor für Objekte der Klasse Standardtuer, 
+     * wo die Spezifikationen strikt laut der Angabe angegeben sind.
+     * Zustand wird von der Klasse Produkt vererbt.
      */
-    public Standardtuer(int holzeinheiten, int schrauben, int farbeinheiten, int kartoneinheiten, int produktionsZeit)
+    public Standardtuer(int zustand)
     {
         // Instanzvariable initialisieren
-        super(0);
-        this.holzeinheiten = holzeinheiten;
-        this.schrauben = schrauben;
-        this.farbeinheiten = farbeinheiten;
-        this.kartoneinheiten = kartoneinheiten;
-        this.produktionsZeit = produktionsZeit;
+        super(zustand);
     }
     
     /**
-     * Konstruktor für Objekte der Klasse Premiumtuer, wo die Spezifikationen strikt laut der Angabe angegeben sind.
-     */
-    public Standardtuer()
-    {
-        // Instanzvariable initialisieren
-        super(0);
-        this.holzeinheiten = 2;
-        this.schrauben = 10;
-        this.farbeinheiten = 2;
-        this.kartoneinheiten = 1;
-        this.produktionsZeit = 10;
-    }
-    
-    /**
-     * Methode "gibEinheitenPremium" gibt an, welche genaue Anzahl an Holzeinheiten, Schrauben, Glaseinheiten, Farbeinheiten, Kartoneinheiten benötigt wird
-     * und wie lange die Produktionszeit für die Premiumtürist.
+     * Methode "gibEinheitenPremium" gibt an, welche genaue Anzahl an Holzeinheiten, 
+     * Schrauben, Glaseinheiten, Farbeinheiten, Kartoneinheiten benötigt werden.
+     * und wie lange die Produktionszeit für die Standardtuer ist.
      */
     public void gibEinheitenStandard()
     {
         // tragen Sie hier den Code ein
         System.out.println("Die Standardtür benötigt die folgenden Materialen: ");
-        System.out.println("Holz: " + holzeinheiten + " Einheiten");
-        System.out.println("Schrauben: " + schrauben + " Einheiten");
-        System.out.println("Farbe: " + farbeinheiten + " Einheiten");
-        System.out.println("Karton: " + kartoneinheiten + " Einheit");
-        System.out.println("Die Produktionszeit beträgt " + produktionsZeit + " Minuten.");
+        System.out.println("Holz: " + HOLZEINHEITEN + " Einheiten");
+        System.out.println("Schrauben: " + SCHRAUBEN + " Einheiten");
+        System.out.println("Farbe: " + FARBEINHEITEN + " Einheiten");
+        System.out.println("Karton: " + KARTONEINHEITEN + " Einheit");
+        System.out.println(" ");
+        System.out.println("Die Produktionszeit beträgt " + PRODUKTIONSZEIT + " Minuten.");
     }
     
     /**
-     * Methode "gibHolzeinheiten" fragt ab, welche Menge an Holzeinheiten benötigt wird
+     * Methode "gibHolzeinheiten" fragt ab, welche Menge an Holzeinheiten benötigt wird.
      */
     public int gibHolzeinheiten()
     {
         // tragen Sie hier den Code ein
-        return holzeinheiten;
+        return HOLZEINHEITEN;
     }
     /**
-     * Methode "gibSchrauben" fragt ab, welche Menge an Holzeinheiten benötigt wird
+     * Methode "gibSchrauben" fragt ab, welche Menge an Schrauben benötigt wird.
      */
     public int gibSchrauben()
     {
         // tragen Sie hier den Code ein
-        return schrauben;
+        return SCHRAUBEN;
     }
     /**
-     * Methode "gibFarbeinheiten" fragt ab, welche Menge an Holzeinheiten benötigt wird
+     * Methode "gibFarbeinheiten" fragt ab, welche Menge an Farbeinheiten benötigt wird.
      */
     public int gibFarbeinheiten()
     {
         // tragen Sie hier den Code ein
-        return farbeinheiten;
+        return FARBEINHEITEN;
     }
     /**
-     * Methode "gibKartoneinheiten" fragt ab, welche Menge an Holzeinheiten benötigt wird
+     * Methode "gibKartoneinheiten" fragt ab, welche Menge an Kartoneinheiten benötigt wird.
      */
     public int gibKartoneinheiten()
     {
         // tragen Sie hier den Code ein
-        return kartoneinheiten;
+        return KARTONEINHEITEN;
     }
     /**
-     * Methode "gibProduktionsZeit" fragt ab, welche Menge an Holzeinheiten benötigt wird
+     * Methode "gibProduktionsZeit" fragt ab, wie Lange die Produktionszeit ist.
      */
     public int gibProduktionsZeit()
     {
         // tragen Sie hier den Code ein
-        return produktionsZeit;
+        return PRODUKTIONSZEIT;
     }
 }

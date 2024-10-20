@@ -1,10 +1,8 @@
 
 /**
- * Beschreiben Sie hier die Klasse Produkt.
- * Die Klasse Produkt gibt an, um welches Produkt es sich handelt - Premium- oder Standardtür. 
- * Die Klasse hat Methoden, um den aktuellen Zustand des Produktes abzufragen und
- * den Zustand eines Produktes zu ändern.
- * @Gruppe 08
+ * Die Klasse Produkt enthält Methoden, um den aktuellen Zustand des Produktes abzufragen 
+ * und den Zustand eines Produktes zu ändern.
+ * @author Gruppe 08
  * @version 1.0
  */
 public class Produkt 
@@ -18,19 +16,29 @@ public class Produkt
     public Produkt(int derZustand)
     {
         // Instanzvariable initialisieren
-        zustand = derZustand;
+        if (derZustand < 0) {
+            System.out.println("Der Zustand darf nicht negativ sein.");
+        }
+        else{
+        this.zustand = derZustand;
+        }
     }
 
     /**
      * Diese Methode ändert den Zustand des Produkts.
      */
     public void zustandAendern(int neuerZustand) {
+        if (neuerZustand < 0) {
+        System.out.println("Der Zustand darf nicht negativ sein.");
+        }
+        else {
         this.zustand = neuerZustand;
+        }
     }
     /**
      * Diese Methode gibt den aktuellen Zustand des Produkts zurück.
      */
     public int aktuellerZustand() {
-    return zustand;
+        return zustand;
     }
 }

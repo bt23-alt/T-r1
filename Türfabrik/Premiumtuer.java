@@ -1,113 +1,95 @@
 
 /**
- * Beschreiben Sie hier die Klasse Premiumtuer.
- * Die Klasse Premiumtür gibt an, welche Spezifikationen die Premiumtür hat. 
- * Und sie hat die Get-Methoden, um diese Variablen abzufragen.
- * @Gruppe 08
+ * Die Klasse Premiumtuer gibt an, welche Spezifikationen die Premiumtür hat. 
+ * Zudem hat die Klasse die Get-Methoden, um diese Variablen abzufragen.
+ * @author Gruppe 08
  * @version 1.0
  */
 public class Premiumtuer extends Produkt
 {
-    // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
-    private int holzeinheiten;
-    private int schrauben;
-    private int glaseinheiten;
-    private int farbeinheiten;
-    private int kartoneinheiten;
-    private int produktionsZeit;
+    // Die Instanzvariablen geben die Produktspezifikationen der Premiumtuer an.
+    private static final int HOLZEINHEITEN = 4;
+    private static final int SCHRAUBEN = 5;
+    private static final int GLASEINHEITEN = 5;
+    private static final int FARBEINHEITEN = 1;
+    private static final int KARTONEINHEITEN = 5;
+    private static final int PRODUKTIONSZEIT = 30;
 
     /**
-     * Konstruktor für Objekte der Klasse Premiumtuer, wo die Spezifikationen individuell angepasst werden können.
+     * Konstruktor für Objekte der Klasse Premiumtuer, 
+     * wo die Spezifikationen strikt laut der Angabe angegeben sind.
+     * Zustand wird von der Klasse Produkt vererbt.
      */
-    public Premiumtuer(int holzeinheiten, int schrauben, int glaseinheiten, int farbeinheiten, int kartoneinheiten, int produktionsZeit)
+    public Premiumtuer(int zustand)
     {
         // Instanzvariable initialisieren
-        super(0);
-        this.holzeinheiten = holzeinheiten;
-        this.schrauben = schrauben;
-        this.glaseinheiten = glaseinheiten;
-        this.farbeinheiten = farbeinheiten;
-        this.kartoneinheiten = kartoneinheiten;
-        this.produktionsZeit = produktionsZeit;
+        super(zustand);
     }
     
     /**
-     * Konstruktor für Objekte der Klasse Premiumtuer, wo die Spezifikationen strikt laut der Angabe angegeben sind.
-     */
-    public Premiumtuer()
-    {
-        // Instanzvariable initialisieren
-        super(0);
-        this.holzeinheiten = 4;
-        this.schrauben = 5;
-        this.glaseinheiten = 5;
-        this.farbeinheiten = 1;
-        this.kartoneinheiten = 5;
-        this.produktionsZeit = 30;
-    }
-    
-    /**
-     * Methode "gibEinheitenPremium" gibt an, welche genaue Anzahl an Holzeinheiten, Schrauben, Glaseinheiten, Farbeinheiten, Kartoneinheiten benötigt wird
-     * und wie lange die Produktionszeit für die Premiumtürist.
+     * Methode "gibEinheitenPremium" gibt an, welche genaue Anzahl an Holzeinheiten, 
+     * Schrauben, Glaseinheiten, Farbeinheiten, Kartoneinheiten benötigt wird
+     * und wie lange die Produktionszeit für die Premiumtuer ist.
      */
     public void gibEinheitenPremium()
     {
         // tragen Sie hier den Code ein
         System.out.println("Die Premiumtür benötigt die folgenden Materialen: ");
-        System.out.println("Holz: " + holzeinheiten + " Einheiten");
-        System.out.println("Schrauben: " + schrauben + " Einheiten");
-        System.out.println("Glas: " + glaseinheiten + " Einheiten");
-        System.out.println("Farbe: " + farbeinheiten + " Einheit");
-        System.out.println("Karton: " + kartoneinheiten + " Einheiten");
-        System.out.println("Die Produktionszeit beträgt " + produktionsZeit + " Minuten.");
+        System.out.println("Holz: " + HOLZEINHEITEN + " Einheiten");
+        System.out.println("Schrauben: " + SCHRAUBEN + " Einheiten");
+        System.out.println("Glas: " + GLASEINHEITEN + " Einheiten");
+        System.out.println("Farbe: " + FARBEINHEITEN + " Einheit");
+        System.out.println("Karton: " + KARTONEINHEITEN + " Einheiten");
+        System.out.println(" ");
+        System.out.println("Die Produktionszeit beträgt " + PRODUKTIONSZEIT + " Minuten.");
     }
     
     /**
-     * Methode "gibHolzeinheiten" fragt ab, welche Menge an Holzeinheiten benötigt wird
+     * Methode "gibHolzeinheiten" fragt ab, welche Menge an Holzeinheiten benötigt wird.
      */
     public int gibHolzeinheiten()
     {
         // tragen Sie hier den Code ein
-        return holzeinheiten;
+        return HOLZEINHEITEN;
     }
     /**
-     * Methode "gibSchrauben" fragt ab, welche Menge an Holzeinheiten benötigt wird
+     * Methode "gibSchrauben" fragt ab, welche Menge an Schrauben benötigt wird.
      */
     public int gibSchrauben()
     {
         // tragen Sie hier den Code ein
-        return schrauben;
+        return SCHRAUBEN;
     }
     /**
-     * Methode "gibGlaseinheiten" fragt ab, welche Menge an Holzeinheiten benötigt wird
+     * Methode "gibGlaseinheiten" fragt ab, welche Menge an Glaseinheiten benötigt wird.
      */
     public int gibGlaseinheiten()
     {
         // tragen Sie hier den Code ein
-        return glaseinheiten;
+        return GLASEINHEITEN;
     }
     /**
-     * Methode "gibFarbeinheiten" fragt ab, welche Menge an Holzeinheiten benötigt wird
+     * Methode "gibFarbeinheiten" fragt ab, welche Menge an Farbeinheiten benötigt wird.
      */
     public int gibFarbeinheiten()
     {
         // tragen Sie hier den Code ein
-        return farbeinheiten;
+        return FARBEINHEITEN;
     }
     /**
-     * Methode "gibKartoneinheiten" fragt ab, welche Menge an Holzeinheiten benötigt wird
+     * Methode "gibKartoneinheiten" fragt ab, welche Menge an Kartoneinheiten benötigt wird.
      */
     public int gibKartoneinheiten()
     {
         // tragen Sie hier den Code ein
-        return kartoneinheiten;
+        return KARTONEINHEITEN;
     }
     /**
-     * Methode "gibProduktionsZeit" fragt ab, welche Menge an Holzeinheiten benötigt wird
+     * Methode "gibProduktionsZeit" fragt ab, wie Lange die Produktionszeit ist.
      */
     public int gibProduktionsZeit()
     {
         // tragen Sie hier den Code ein
-        return produktionsZeit;
+        return PRODUKTIONSZEIT;
     }
 }

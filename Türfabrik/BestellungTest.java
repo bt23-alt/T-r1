@@ -26,6 +26,7 @@ public class BestellungTest
      * Wird vor jeder Testfall-Methode aufgerufen.
      * Vor jedem Test wird eine Bestellung von 3 Standardtueren, und 2 Premiumtueren, 
      * mit der Bestellungsnummer 45 erstellt.
+     * Jeder Test wird vor dem Start angekündigt.
      */
     @BeforeEach
     public void setUp()
@@ -40,13 +41,13 @@ public class BestellungTest
      * Gibt das Testgerüst wieder frei.
      * Wird nach jeder Testfall-Methode aufgerufen.
      * Nach jedem Test wird die ArrayList Bestellung auf null gesetzt.
+     * Nachricht bestätigt, dass Test zu Ende ist.
      */
     @AfterEach
     public void tearDown()
     {
         // Setze die Bestellung auf null
-        bestellung = null;  
-        System.out.println();
+        bestellung = null;
         System.out.println("Testlauf Bestellung Ende");
         System.out.println("------------------------");
     }

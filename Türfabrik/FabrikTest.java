@@ -22,9 +22,10 @@ public class FabrikTest
     }
 
     /**
-     *  Setzt das Testgerüst fuer den Test.
+     * Setzt das Testgerüst fuer den Test.
      * Wird vor jeder Testfall-Methode aufgerufen.
      * Vor jedem Test wird eine neue ArrayList Fabrik erstellt.
+     * Jeder Test wird vor dem Start angekündigt.
      */
     @BeforeEach
     public void setUp() {
@@ -42,7 +43,6 @@ public class FabrikTest
     @AfterEach
     public void tearDown()
     {
-        System.out.println();
         System.out.println("Testlauf Fabrik Ende");
         System.out.println("------------------------");
     }
@@ -66,7 +66,7 @@ public class FabrikTest
     
     @Test
     public void testBestellungAufnehmenBeiNullOderNegativ() {
-        // Arrange: Versuche, eine Bestellung mit ungültigen Werten aufzugeben
+        // Arrange: Versuche, eine Bestellung mit ungültigen Werten aufzugeben.
         // Version1: Beide Werte sind negativ.
         fabrik.bestellungAufgeben(-2, -1);
         // Version2: Beide Werte sind gleich 0.
@@ -77,11 +77,11 @@ public class FabrikTest
         fabrik.bestellungAufgeben(-1, 3);
     
         // Act: Bestellungen werden auf Konsole ausgegeben.
-        // Erwarte leere Ausgabe
+        // Erwarte leere Ausgabe.
         fabrik.bestellungAusgeben();
     
-        // Assert: Überpfüe die Ausgabe von keinen Bestellungen
-        //Keine der Bestellung sollte aufgenommen werden, da mindestens einer der Werte der Bestellung ungültig ist.
+        // Assert: Überpruefen, ob die Ausgabe von keinen Bestellungen
+        // Keine der Bestellung sollte aufgenommen werden, da mindestens einer der Werte der Bestellung ungültig ist.
         assertTrue(fabrik.getBestellungen().isEmpty());
     }
 }
