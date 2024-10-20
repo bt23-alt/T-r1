@@ -50,6 +50,7 @@ public class Standardtuer extends Produkt
         // tragen Sie hier den Code ein
         return HOLZEINHEITEN;
     }
+    
     /**
      * Methode "gibSchrauben" fragt ab, welche Menge an Schrauben benötigt wird.
      */
@@ -58,6 +59,7 @@ public class Standardtuer extends Produkt
         // tragen Sie hier den Code ein
         return SCHRAUBEN;
     }
+    
     /**
      * Methode "gibFarbeinheiten" fragt ab, welche Menge an Farbeinheiten benötigt wird.
      */
@@ -66,6 +68,7 @@ public class Standardtuer extends Produkt
         // tragen Sie hier den Code ein
         return FARBEINHEITEN;
     }
+    
     /**
      * Methode "gibKartoneinheiten" fragt ab, welche Menge an Kartoneinheiten benötigt wird.
      */
@@ -74,6 +77,7 @@ public class Standardtuer extends Produkt
         // tragen Sie hier den Code ein
         return KARTONEINHEITEN;
     }
+    
     /**
      * Methode "gibProduktionsZeit" fragt ab, wie Lange die Produktionszeit ist.
      */

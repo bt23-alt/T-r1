@@ -19,6 +19,4 @@ comment7.params=
 comment7.target=int\ gibAnzahlStandardTueren()
 comment8.params=
 comment8.target=int\ gibAnzahlPremiumTueren()
-comment9.params=
-comment9.target=java.util.ArrayList\ gibBestellteProdukte()
-numComments=10
+numComments=9

@@ -12,5 +12,5 @@ comment3.target=void\ bestellungAusgeben()
 comment4.params=args
 comment4.target=void\ main(java.lang.String[])
 comment5.params=
-comment5.target=java.util.ArrayList\ getBestellungen()
+comment5.target=java.util.ArrayList\ gibBestellungen()
 numComments=6

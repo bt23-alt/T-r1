@@ -28,34 +28,35 @@ public class Fabrik
     {
         // tragen Sie hier den Code ein
          if (standardTueren == 0 && premiumTueren == 0) {
-        System.out.println("Tut mir leid, dass Sie nichts gefunden haben.");
-        System.out.println("Bis zum nächsten Mal!");
-        System.out.println("");
+            System.out.println("Tut mir leid, dass Sie nichts gefunden haben.");
+            System.out.println("Bis zum nächsten Mal!");
+            System.out.println("");
         }
         else if (standardTueren < 0 || premiumTueren < 0) {
-        System.out.println("Die Anzahl der Türen muss positiv sein.");
-        System.out.println("");
+            System.out.println("Die Anzahl der Türen muss positiv sein.");
+            System.out.println("");
         }
         else {
-        Bestellung neueBestellung = new Bestellung(standardTueren, premiumTueren, bestellungsNr);
-        bestellungen.add(neueBestellung);
-        this.bestellungsNr++;
-        neueBestellung.bestellungBestaetigen();
+            Bestellung neueBestellung = new Bestellung(standardTueren, premiumTueren, bestellungsNr);
+            bestellungen.add(neueBestellung);
+            this.bestellungsNr++;
+            neueBestellung.bestellungBestaetigen();
         }
     }
     
     public void bestellungAusgeben() {
-    // Hier ist die Logik implementiert, um die Details aller Bestellungen auszugeben
-    System.out.println("Folgende Bestellungen wurden aufgegeben:");
-    System.out.println("");
-        for (Bestellung bestellung : bestellungen) {
-            System.out.println("Bestellnummer: " + bestellung.gibBestellungsNr());
-            System.out.println("Anzahl Standardtüren: " + bestellung.gibAnzahlStandardTueren());
-            System.out.println("Anzahl Premiumtüren: " + bestellung.gibAnzahlPremiumTueren());
-            System.out.println("Bestellbestätigung: " + bestellung.gibBestellBestaetigung());
-            System.out.println("Beschaffungszeit: " + bestellung.gibBeschaffungsZeit());
-            System.out.println("--------------------");
-        }
+        // Hier ist die Logik implementiert, um die Details aller Bestellungen auszugeben
+        System.out.println("Folgende Bestellungen wurden aufgegeben:");
+        System.out.println("");
+        
+            for (Bestellung bestellung : bestellungen) {
+                System.out.println("Bestellnummer: " + bestellung.gibBestellungsNr());
+                System.out.println("Anzahl Standardtüren: " + bestellung.gibAnzahlStandardTueren());
+                System.out.println("Anzahl Premiumtüren: " + bestellung.gibAnzahlPremiumTueren());
+                System.out.println("Bestellbestätigung: " + bestellung.gibBestellBestaetigung());
+                System.out.println("Beschaffungszeit: " + bestellung.gibBeschaffungsZeit());
+                System.out.println("--------------------");
+            }
     }
     
      public static void main(String[] args) {
@@ -70,8 +71,8 @@ public class Fabrik
         int totalPremiumTueren = 0;
     
         for (Bestellung bestellung : fabrik.bestellungen) {
-        totalStandardTueren += bestellung.gibAnzahlStandardTueren();
-        totalPremiumTueren += bestellung.gibAnzahlPremiumTueren();
+            totalStandardTueren += bestellung.gibAnzahlStandardTueren();
+            totalPremiumTueren += bestellung.gibAnzahlPremiumTueren();
         }
     
         System.out.println();
@@ -79,7 +80,8 @@ public class Fabrik
         System.out.println("Insgesamt wurden " + totalPremiumTueren + " Premiumtüren bestellt.");
     }
     
-    public ArrayList<Bestellung> getBestellungen() {
+    public ArrayList<Bestellung> gibBestellungen() 
+    {
     return bestellungen;
     }
 }

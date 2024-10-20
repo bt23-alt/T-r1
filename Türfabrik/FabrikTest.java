@@ -28,7 +28,8 @@ public class FabrikTest
      * Jeder Test wird vor dem Start angekündigt.
      */
     @BeforeEach
-    public void setUp() {
+    public void setUp() 
+    {
         // Initialisiere Eine neue Instanz von Fabrik
         fabrik = new Fabrik();
         System.out.println("Testlauf Fabrik Start");
@@ -48,14 +49,15 @@ public class FabrikTest
     }
     
     @Test
-    public void testBestellungsNummer() {
+    public void testBestellungsNummer() 
+    {
         // Arrange: 2 Bestellungen werden in der Fabrik aufgenommen
         fabrik.bestellungAufgeben(3, 4);
         fabrik.bestellungAufgeben(1,2);
         
         // Act: Die BestellungsNummern der beiden Bestellungen werden abgerufen.
-        Bestellung ersteBestellung = fabrik.getBestellungen().get(0);  
-        Bestellung zweiteBestellung = fabrik.getBestellungen().get(1);
+        Bestellung ersteBestellung = fabrik.gibBestellungen().get(0);  
+        Bestellung zweiteBestellung = fabrik.gibBestellungen().get(1);
 
         // Assert: BestellungsNummern werden überprüft.
         // Bestellung 1: Bestellnummer sollte 1 sein.
@@ -65,7 +67,8 @@ public class FabrikTest
     }
     
     @Test
-    public void testBestellungAufnehmenBeiNullOderNegativ() {
+    public void testBestellungAufnehmenBeiNullOderNegativ() 
+    {
         // Arrange: Versuche, eine Bestellung mit ungültigen Werten aufzugeben.
         // Version1: Beide Werte sind negativ.
         fabrik.bestellungAufgeben(-2, -1);
@@ -82,7 +85,7 @@ public class FabrikTest
     
         // Assert: Überpruefen, ob die Ausgabe von keinen Bestellungen
         // Keine der Bestellung sollte aufgenommen werden, da mindestens einer der Werte der Bestellung ungültig ist.
-        assertTrue(fabrik.getBestellungen().isEmpty());
+        assertTrue(fabrik.gibBestellungen().isEmpty());
     }
 }
 

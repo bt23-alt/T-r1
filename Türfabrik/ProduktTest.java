@@ -49,7 +49,8 @@ public class ProduktTest
     }
     
     @Test
-    public void testAktuellerZustand() {
+    public void testAktuellerZustand() 
+    {
         // Arrange: Ein Produkt mit dem Zustand 1 wird erstellt.
         produkt1 = new Produkt(1);
         
@@ -62,7 +63,8 @@ public class ProduktTest
     }
     
     @Test
-    public void testZustandAendern() {
+    public void testZustandAendern() 
+    {
         // Arrange: Ein Produkt mit dem Zustand 2 wird erstellt.
         produkt1 = new Produkt(2);
         

@@ -53,7 +53,8 @@ public class BestellungTest
     }
     
      @Test
-    public void testBestellungsNr() {
+    public void testBestellungsNr() 
+    {
         // Act: Gib die BestellungsNr aus.
         bestellung.gibBestellungsNr();
         
@@ -63,7 +64,8 @@ public class BestellungTest
     }
     
     @Test
-    public void testAnzahlStandardTueren() {
+    public void testAnzahlStandardTueren() 
+    {
         // Act: Gib die Anzahl der Standardtueren aus.
         bestellung.gibAnzahlStandardTueren();
         
@@ -73,7 +75,8 @@ public class BestellungTest
     }
 
     @Test
-    public void testAnzahlPremiumTueren() {
+    public void testAnzahlPremiumTueren() 
+    {
         // Act: Gib die Anzahl der Standardtueren aus.
         bestellung.gibAnzahlPremiumTueren();
         
@@ -83,7 +86,8 @@ public class BestellungTest
     }
 
     @Test
-    public void testBestellungBestaetigen() {
+    public void testBestellungBestaetigen() 
+    {
         // Act: Bestellung wird bestätigt.
         bestellung.bestellungBestaetigen();
         
@@ -92,7 +96,8 @@ public class BestellungTest
     }
 
     @Test
-    public void testBeschaffungsZeit() {
+    public void testBeschaffungsZeit() 
+    {
         // Act: Beschaffungszeit wird gesetzt.
         bestellung.setzeBeschaffungsZeit(5);
         

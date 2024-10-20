@@ -40,10 +40,6 @@ public class Bestellung
     public void bestellungBestaetigen()
     {
         this.bestellBestaetigung = true;
-        //System.out.println("Ihre Bestellung wurde bestätigt:");
-        //System.out.println("Bestellnummer:  " + this.bestellungsNr);
-        //System.out.println("Anzahl Standardtüren:  " + this.anzahlStandardTueren);
-        //System.out.println("Anzahl Premiumtüren:   " + this.anzahlPremiumTueren);
     }
     
     public boolean gibBestellBestaetigung()
@@ -74,9 +70,5 @@ public class Bestellung
      public int gibAnzahlPremiumTueren()
     {
         return anzahlPremiumTueren;
-    }
-    
-    public ArrayList<Produkt> gibBestellteProdukte() {
-        return this.bestellteProdukte;
     }
 }

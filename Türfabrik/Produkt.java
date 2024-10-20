@@ -19,26 +19,29 @@ public class Produkt
         if (derZustand < 0) {
             System.out.println("Der Zustand darf nicht negativ sein.");
         }
-        else{
-        this.zustand = derZustand;
+        else {
+            this.zustand = derZustand;
         }
     }
 
     /**
      * Diese Methode ändert den Zustand des Produkts.
      */
-    public void zustandAendern(int neuerZustand) {
+    public void zustandAendern(int neuerZustand) 
+    {
         if (neuerZustand < 0) {
-        System.out.println("Der Zustand darf nicht negativ sein.");
+            System.out.println("Der Zustand darf nicht negativ sein.");
         }
         else {
-        this.zustand = neuerZustand;
+            this.zustand = neuerZustand;
         }
     }
+    
     /**
      * Diese Methode gibt den aktuellen Zustand des Produkts zurück.
      */
-    public int aktuellerZustand() {
+    public int aktuellerZustand() 
+    {
         return zustand;
     }
 }
