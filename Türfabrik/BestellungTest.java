@@ -24,6 +24,8 @@ public class BestellungTest
     /**
      *  Setzt das Testgerüst fuer den Test.
      * Wird vor jeder Testfall-Methode aufgerufen.
+     * Vor jedem Test wird eine Bestellung von 3 Standardtueren, und 2 Premiumtueren, 
+     * mit der Bestellungsnummer 45 erstellt.
      */
     @BeforeEach
     public void setUp()
@@ -36,8 +38,8 @@ public class BestellungTest
 
     /**
      * Gibt das Testgerüst wieder frei.
-     *
      * Wird nach jeder Testfall-Methode aufgerufen.
+     * Nach jedem Test wird die ArrayList Bestellung auf null gesetzt.
      */
     @AfterEach
     public void tearDown()
@@ -51,32 +53,39 @@ public class BestellungTest
      @Test
     public void testBestellungsNr() {
         // Überprüfen, ob die Bestellnummer korrekt ist
-        assertEquals(45, bestellung.gibBestellungsNr(), "Die Bestellnummer sollte 45 sein.");
+        //Die Bestellnummer sollte 45 sein.
+        assertEquals(45, bestellung.gibBestellungsNr());
     }
     
     @Test
     public void testAnzahlStandardTueren() {
         // Überprüfen, ob die Anzahl der Standardtüren korrekt ist
-        assertEquals(3, bestellung.gibAnzahlStandardTueren(), "Die Anzahl der Standardtüren sollte 3 sein.");
+        //Die Anzahl der Standardtüren sollte 3 sein.
+        assertEquals(3, bestellung.gibAnzahlStandardTueren());
     }
 
     @Test
     public void testAnzahlPremiumTueren() {
         // Überprüfen, ob die Anzahl der Premiumtüren korrekt ist
-        assertEquals(2, bestellung.gibAnzahlPremiumTueren(), "Die Anzahl der Premiumtüren sollte 2 sein.");
+        // Die Anzahl der Premiumtüren sollte 2 sein.
+        assertEquals(2, bestellung.gibAnzahlPremiumTueren());
     }
 
     @Test
     public void testBestellungBestaetigen() {
-        // Bestelle bestätigen und überprüfen
+        // Bestellung wird bestätigt
         bestellung.bestellungBestaetigen();
-        assertTrue(bestellung.gibBestellBestaetigung(), "Die Bestellung sollte bestätigt sein.");
+        
+        //Die Bestellung sollte bestätigt sein.
+        assertTrue(bestellung.gibBestellBestaetigung());
     }
 
     @Test
     public void testBeschaffungsZeit() {
-        // Beschaffungszeit setzen und überprüfen
+        // Beschaffungszeit wird gesetzt.
         bestellung.setzeBeschaffungsZeit(5);
-        assertEquals(5, bestellung.gibBeschaffungsZeit(), "Die Beschaffungszeit sollte 5 sein.");
+        
+        //Die Beschaffungszeit sollte 5 sein.
+        assertEquals(5, bestellung.gibBeschaffungsZeit());
     }
 }

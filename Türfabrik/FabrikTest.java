@@ -24,6 +24,7 @@ public class FabrikTest
     /**
      *  Setzt das Testgerüst fuer den Test.
      * Wird vor jeder Testfall-Methode aufgerufen.
+     * Vor jedem Test wird eine neue ArrayList Fabrik erstellt.
      */
     @BeforeEach
     public void setUp() {
@@ -35,8 +36,8 @@ public class FabrikTest
     
     /**
      * Gibt das Testgerüst wieder frei.
-     *
      * Wird nach jeder Testfall-Methode aufgerufen.
+     * Nachricht bestätigt, dass Test zu Ende ist.
      */
     @AfterEach
     public void tearDown()
@@ -48,29 +49,38 @@ public class FabrikTest
     
     @Test
     public void testBestellungsNummer() {
-        // Bestellung 1: Bestellungsnummer sollte 1 sein
+        // Arrange: 2 Bestellungen werden in der Fabrik aufgenommen
         fabrik.bestellungAufgeben(3, 4);
-        Bestellung ersteBestellung = fabrik.getBestellungen().get(0);  // Hole die erste Bestellung
-        assertEquals(1, ersteBestellung.gibBestellungsNr());
+        fabrik.bestellungAufgeben(1,2);
+        
+        // Act: Die BestellungsNummern der beiden Bestellungen werden abgerufen.
+        Bestellung ersteBestellung = fabrik.getBestellungen().get(0);  
+        Bestellung zweiteBestellung = fabrik.getBestellungen().get(1);
 
-        // Bestellung 2: Bestellungsnummer sollte 2 sein
-        fabrik.bestellungAufgeben(1, 2);
-        Bestellung zweiteBestellung = fabrik.getBestellungen().get(1);  // Hole die zweite Bestellung
+        // Assert: BestellungsNummern werden überprüft.
+        // Bestellung 1: Bestellnummer sollte 1 sein.
+        // Bestellung 2: Bestellungsnummer sollte 2 sein.
+        assertEquals(1, ersteBestellung.gibBestellungsNr()); 
         assertEquals(2, zweiteBestellung.gibBestellungsNr());
     }
     
     @Test
     public void testBestellungAufnehmenBeiNullOderNegativ() {
-        // Act: Versuche, eine Bestellung mit ungültigen Werten aufzugeben
-        fabrik.bestellungAufgeben(-2, -1);  // Beide Werte negativ.
-        fabrik.bestellungAufgeben(0, 0); //Beide Werte gleich 0.
-        fabrik.bestellungAufgeben(1, -2); //Ein Wert negativ und ein Wert positiv
-        fabrik.bestellungAufgeben(-1, 3); //Ein Wert negativ und ein Wert positiv
+        // Arrange: Versuche, eine Bestellung mit ungültigen Werten aufzugeben
+        // Version1: Beide Werte sind negativ.
+        fabrik.bestellungAufgeben(-2, -1);
+        // Version2: Beide Werte sind gleich 0.
+        fabrik.bestellungAufgeben(0, 0); 
+        // Version3: Anzahl fuer Standardtueren ist positiv und Anzahl von Premiumtueren ist negativ.
+        fabrik.bestellungAufgeben(1, -2);
+        // Version4: Anzahl fuer Standartueren ist neagtiv und Anzahl von Premiumtueren ist positiv.
+        fabrik.bestellungAufgeben(-1, 3);
     
-        // Assert: Überprüfe die Ausgabe auf keine Bestellungen
-        // Erwartete leere Ausgabe
+        // Act: Bestellungen werden auf Konsole ausgegeben.
+        // Erwarte leere Ausgabe
         fabrik.bestellungAusgeben();
     
+        // Assert: Überpfüe die Ausgabe von keinen Bestellungen
         //Keine der Bestellung sollte aufgenommen werden, da mindestens einer der Werte der Bestellung ungültig ist.
         assertTrue(fabrik.getBestellungen().isEmpty());
     }
