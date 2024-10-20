@@ -45,35 +45,38 @@ public class Bestellung
         //System.out.println("Anzahl Standardtüren:  " + this.anzahlStandardTueren);
         //System.out.println("Anzahl Premiumtüren:   " + this.anzahlPremiumTueren);
     }
+    
     public boolean gibBestellBestaetigung()
     {
         return this.bestellBestaetigung;
     }
+    
     public void setzeBeschaffungsZeit(int zeit)
     {
         this.beschaffungsZeit = zeit;
     }
+    
     public int gibBeschaffungsZeit()
     {
         return beschaffungsZeit;
     }
+    
     public int gibBestellungsNr()
     {
          return bestellungsNr;
     }
+    
     public int gibAnzahlStandardTueren()
     {
         return anzahlStandardTueren;
     }
+    
      public int gibAnzahlPremiumTueren()
     {
         return anzahlPremiumTueren;
     }
-    public ArrayList gibBestellteProdukte() {
+    
+    public ArrayList<Produkt> gibBestellteProdukte() {
         return this.bestellteProdukte;
     }
 }
-
- //public void produktHinzufuegen(Produkt produkt) {
-        //bestellteProdukte.add(produkt);
-    //}
