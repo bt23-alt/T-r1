@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.target=BestellungTest
+comment0.text=\n\ Die\ Test-Klasse\ BestellungTest.\n\n\ @author\ \ Gruppe\ 08\n\ @version\ 1.0\n
+comment1.params=
+comment1.target=BestellungTest()
+comment1.text=\n\ Konstruktor\ fuer\ die\ Test-Klasse\ BestellungTest\n
+comment2.params=
+comment2.target=void\ setUp()
+comment2.text=\n\ \ Setzt\ das\ Testger\u00FCst\ fuer\ den\ Test.\n\ Wird\ vor\ jeder\ Testfall-Methode\ aufgerufen.\n
+comment3.params=
+comment3.target=void\ tearDown()
+comment3.text=\n\ Gibt\ das\ Testger\u00FCst\ wieder\ frei.\n\n\ Wird\ nach\ jeder\ Testfall-Methode\ aufgerufen.\n
+comment4.params=
+comment4.target=void\ testBestellungsNr()
+comment5.params=
+comment5.target=void\ testAnzahlStandardTueren()
+comment6.params=
+comment6.target=void\ testAnzahlPremiumTueren()
+comment7.params=
+comment7.target=void\ testBestellungBestaetigen()
+comment8.params=
+comment8.target=void\ testBeschaffungsZeit()
+numComments=9
