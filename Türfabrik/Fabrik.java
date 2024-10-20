@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 /**
  * In der Fabrik werden Bestellungen abgearbeitet. Hier wird das Programm gestartet.
- * @Gruppe 08 
+ * @author Gruppe 08 
  * @version 1.0
  */
 public class Fabrik
@@ -27,14 +27,25 @@ public class Fabrik
     public void bestellungAufgeben(int standardTueren, int premiumTueren) 
     {
         // tragen Sie hier den Code ein
+         if (standardTueren == 0 && premiumTueren == 0) {
+        System.out.println("Tut mir leid, dass Sie nichts gefunden haben.");
+        System.out.println("Bis zum nächsten Mal!");
+        System.out.println("");
+        }
+        else if (standardTueren < 0 || premiumTueren < 0) {
+        System.out.println("Die Anzahl der Türen muss positiv sein.");
+        System.out.println("");
+        }
+        else {
         Bestellung neueBestellung = new Bestellung(standardTueren, premiumTueren, bestellungsNr);
         bestellungen.add(neueBestellung);
         this.bestellungsNr++;
         neueBestellung.bestellungBestaetigen();
+        }
     }
     
     public void bestellungAusgeben() {
-    // Hier implementieren Sie die Logik, um die Details aller Bestellungen auszugeben
+    // Hier ist die Logik implementiert, um die Details aller Bestellungen auszugeben
     System.out.println("Folgende Bestellungen wurden aufgegeben:");
     System.out.println("");
         for (Bestellung bestellung : bestellungen) {
@@ -49,12 +60,26 @@ public class Fabrik
     
      public static void main(String[] args) {
         Fabrik fabrik = new Fabrik();
-        fabrik.bestellungAufgeben(5, 3);
+        fabrik.bestellungAufgeben(3, 4);
         fabrik.bestellungAufgeben(1, 2);
-         fabrik.bestellungAufgeben(4, 1);
+        fabrik.bestellungAufgeben(4, 1);
         fabrik.bestellungAusgeben();
+        
+        // Gesamtanzahl der bestellten Türen berechnen
+        int totalStandardTueren = 0;
+        int totalPremiumTueren = 0;
+    
+        for (Bestellung bestellung : fabrik.bestellungen) {
+        totalStandardTueren += bestellung.gibAnzahlStandardTueren();
+        totalPremiumTueren += bestellung.gibAnzahlPremiumTueren();
+        }
+    
+        System.out.println();
+        System.out.println("Insgesamt wurden " + totalStandardTueren + " Standardtüren bestellt.");
+        System.out.println("Insgesamt wurden " + totalPremiumTueren + " Premiumtüren bestellt.");
+    }
+    
+    public ArrayList<Bestellung> getBestellungen() {
+    return bestellungen;
     }
 }
-
-//Wie Bestellzeit festlegen? -> to do
-//Main Methode erstellen -> In progress
