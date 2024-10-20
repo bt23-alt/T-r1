@@ -1,0 +1,24 @@
+#BlueJ class context
+comment0.target=Bestellung
+comment0.text=\n\ In\ der\ Klasse\ Bestellung\ wird\ vorgegeben,\ wie\ Kundenbestellungen\ aussehen\n\ Sie\ enth\u00E4lt\ die\ bestellten\ Produkte,\ ihren\ Typen\ und\ ihre\ Anzahl,\ Bestellnummer\ und\ Beschaffungszeit\n\ @Gruppe\ 08\n\ @version\ 1.0\n
+comment1.params=anzahlStandardTueren\ anzahlPremiumTueren\ bestellungsNr
+comment1.target=Bestellung(int,\ int,\ int)
+comment1.text=\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Bestellung\n
+comment2.params=
+comment2.target=void\ bestellungBestaetigen()
+comment2.text=\n\ Ein\ Beispiel\ einer\ Methode\ -\ ersetzen\ Sie\ diesen\ Kommentar\ mit\ Ihrem\ eigenen\n
+comment3.params=
+comment3.target=boolean\ gibBestellBestaetigung()
+comment4.params=zeit
+comment4.target=void\ setzeBeschaffungsZeit(int)
+comment5.params=
+comment5.target=int\ gibBeschaffungsZeit()
+comment6.params=
+comment6.target=int\ gibBestellungsNr()
+comment7.params=
+comment7.target=int\ gibAnzahlStandardTueren()
+comment8.params=
+comment8.target=int\ gibAnzahlPremiumTueren()
+comment9.params=
+comment9.target=java.util.ArrayList\ gibBestellteProdukte()
+numComments=10
