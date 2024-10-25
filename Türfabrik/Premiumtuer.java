@@ -2,12 +2,13 @@
 /**
  * Die Klasse Premiumtuer gibt an, welche Spezifikationen die Premiumtür hat. 
  * Zudem hat die Klasse die Get-Methoden, um diese Variablen abzufragen.
+ * 
  * @author Gruppe 08
  * @version 1.0
  */
 public class Premiumtuer extends Produkt
 {
-    // Die Instanzvariablen geben die Produktspezifikationen der Premiumtuer an.
+    // Die Instanzvariablen geben die Produktspezifikationen der Premiumtür an.
     private static final int HOLZEINHEITEN = 4;
     private static final int SCHRAUBEN = 5;
     private static final int GLASEINHEITEN = 5;
@@ -16,24 +17,25 @@ public class Premiumtuer extends Produkt
     private static final int PRODUKTIONSZEIT = 30;
 
     /**
-     * Konstruktor für Objekte der Klasse Premiumtuer, 
-     * wo die Spezifikationen strikt laut der Angabe angegeben sind.
+     * Konstruktor für Objekte der Klasse Premiumtür, 
+     * wo die Spezifikationen strikt laut der Angabe vorgegeben sind.
      * Zustand wird von der Klasse Produkt vererbt.
+     * 
+     * @param zustand gibt den Zustand des Produktes an.
      */
     public Premiumtuer(int zustand)
     {
-        // Instanzvariable initialisieren
+        // Zustand wird von der Klasse Produkt geerbt.
         super(zustand);
     }
     
     /**
      * Methode "gibEinheitenPremium" gibt an, welche genaue Anzahl an Holzeinheiten, 
-     * Schrauben, Glaseinheiten, Farbeinheiten, Kartoneinheiten benötigt wird
-     * und wie lange die Produktionszeit für die Premiumtuer ist.
+     * Schrauben, Glaseinheiten, Farbeinheiten, Kartoneinheiten benötigt werden.
+     * und wie lange die Produktionszeit für die Premiumtür ist.
      */
     public void gibEinheitenPremium()
     {
-        // tragen Sie hier den Code ein
         System.out.println("Die Premiumtür benötigt die folgenden Materialen: ");
         System.out.println("Holz: " + HOLZEINHEITEN + " Einheiten");
         System.out.println("Schrauben: " + SCHRAUBEN + " Einheiten");
@@ -90,7 +92,7 @@ public class Premiumtuer extends Produkt
     }
     
     /**
-     * Methode "gibProduktionsZeit" fragt ab, wie Lange die Produktionszeit ist.
+     * Methode "gibProduktionsZeit" fragt ab, wie lange die Produktionszeit ist.
      */
     public int gibProduktionsZeit()
     {

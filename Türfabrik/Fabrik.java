@@ -6,27 +6,31 @@ import java.util.ArrayList;
  */
 public class Fabrik
 {
-    // Übersicht der erfassten Bestellungen
+    // Übersicht der erfassten Bestellungen.
     private ArrayList<Bestellung> bestellungen;
+    // bestellungsNr, die jeder Bestellung neu übergeben wird.
     private int bestellungsNr;
-    // bestellungsNr, die jeder Bestellung neu übergeben wird
-
+    
     /**
-     * Konstruktor für Objekte der Klasse Fabrik
+     * Konstruktor für Objekte der Klasse Fabrik.
      */
     public Fabrik()
     {
-        // Instanzvariable initialisieren
+        // Neue Array List der Klasse Bestellung wird initialisiert
         bestellungen = new ArrayList<Bestellung>();
         this.bestellungsNr = 1;
     }
 
     /**
-     * Ein Beispiel einer Methode - ersetzen Sie diesen Kommentar mit Ihrem eigenen
+     * Methode, um Bestellungen aufzugeben. Es werden nur Bestellungen mit positiven Werten akzeptiert.
+     * Ansonsten erscheint eine Fehlermeldung. 
+     * 
+     * @param standardTueren Anzahl der bestellten Standardtüren. Muss positiv sein.
+     * @param premiumTueren Anzahl der bestellten Premiumtüren. Muss positiv sein.
      */
     public void bestellungAufgeben(int standardTueren, int premiumTueren) 
     {
-        // tragen Sie hier den Code ein
+        // If-Methode, um korrekte Eingabewerte für die Bestellung zu überprüfen.
          if (standardTueren == 0 && premiumTueren == 0) {
             System.out.println("Tut mir leid, dass Sie nichts gefunden haben.");
             System.out.println("Bis zum nächsten Mal!");
@@ -36,6 +40,7 @@ public class Fabrik
             System.out.println("Die Anzahl der Türen muss positiv sein.");
             System.out.println("");
         }
+        // Bestellung wurde richitg eingegeben und eine neue Bestellung mit neuer Bestellungsnummer hinzugefügt.
         else {
             Bestellung neueBestellung = new Bestellung(standardTueren, premiumTueren, bestellungsNr);
             bestellungen.add(neueBestellung);
@@ -44,8 +49,12 @@ public class Fabrik
         }
     }
     
+    /**
+     * Methode, um alle Bestellungen auf der Konsole auszugeben.
+     *
+     */
     public void bestellungAusgeben() {
-        // Hier ist die Logik implementiert, um die Details aller Bestellungen auszugeben
+        // Hier ist die Logik implementiert, um die Details aller Bestellungen abzufragen.
         System.out.println("Folgende Bestellungen wurden aufgegeben:");
         System.out.println("");
         
@@ -54,7 +63,6 @@ public class Fabrik
                 System.out.println("Anzahl Standardtüren: " + bestellung.gibAnzahlStandardTueren());
                 System.out.println("Anzahl Premiumtüren: " + bestellung.gibAnzahlPremiumTueren());
                 System.out.println("Bestellbestätigung: " + bestellung.gibBestellBestaetigung());
-                System.out.println("Beschaffungszeit: " + bestellung.gibBeschaffungsZeit());
                 System.out.println("--------------------");
             }
     }
@@ -66,7 +74,7 @@ public class Fabrik
         fabrik.bestellungAufgeben(4, 1);
         fabrik.bestellungAusgeben();
         
-        // Gesamtanzahl der bestellten Türen berechnen
+        // Gesamtanzahl der bestellten Türen berechnen.
         int totalStandardTueren = 0;
         int totalPremiumTueren = 0;
     
@@ -74,14 +82,22 @@ public class Fabrik
             totalStandardTueren += bestellung.gibAnzahlStandardTueren();
             totalPremiumTueren += bestellung.gibAnzahlPremiumTueren();
         }
-    
+        
+        // Ausgabe der Gesamtanzahl an bestellten Standard- und Premiumtüren.
         System.out.println();
         System.out.println("Insgesamt wurden " + totalStandardTueren + " Standardtüren bestellt.");
         System.out.println("Insgesamt wurden " + totalPremiumTueren + " Premiumtüren bestellt.");
+        System.out.println();
     }
     
+    
+    /**
+     * Methode, die Übersicht über alle gespeicherten Bestellungen zurückgibt. 
+     * Wird für den Test benutzt.
+     * 
+     */
     public ArrayList<Bestellung> gibBestellungen() 
     {
-    return bestellungen;
+        return bestellungen;
     }
 }

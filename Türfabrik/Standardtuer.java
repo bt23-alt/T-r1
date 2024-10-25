@@ -2,12 +2,13 @@
 /**
  * Die Klasse Standardtuer gibt an, welche Spezifikationen die Standardtür hat. 
  * Zudem hat die Klasse die Get-Methoden, um diese Variablen abzufragen.
+ * 
  * @author Gruppe 08
  * @version 1.0
  */
 public class Standardtuer extends Produkt
 {
-    // Die Instanzvariablen geben die Produktspezifikationen der Standardtuer an.
+    // Die Instanzvariablen geben die Produktspezifikationen der Standardtür an.
     private static final int HOLZEINHEITEN = 2;
     private static final int SCHRAUBEN = 10;
     private static final int FARBEINHEITEN = 2;
@@ -16,23 +17,24 @@ public class Standardtuer extends Produkt
     
     /**
      * Konstruktor für Objekte der Klasse Standardtuer, 
-     * wo die Spezifikationen strikt laut der Angabe angegeben sind.
+     * wo die Spezifikationen strikt laut der Angabe vorgegeben sind.
      * Zustand wird von der Klasse Produkt vererbt.
+     * 
+     * @param zustand gibt den Zustand des Produktes an.
      */
     public Standardtuer(int zustand)
     {
-        // Instanzvariable initialisieren
+        // Zustand wird von der Klasse Produkt geerbt.
         super(zustand);
     }
     
     /**
      * Methode "gibEinheitenPremium" gibt an, welche genaue Anzahl an Holzeinheiten, 
      * Schrauben, Glaseinheiten, Farbeinheiten, Kartoneinheiten benötigt werden.
-     * und wie lange die Produktionszeit für die Standardtuer ist.
+     * und wie lange die Produktionszeit für die Standardtür ist.
      */
     public void gibEinheitenStandard()
     {
-        // tragen Sie hier den Code ein
         System.out.println("Die Standardtür benötigt die folgenden Materialen: ");
         System.out.println("Holz: " + HOLZEINHEITEN + " Einheiten");
         System.out.println("Schrauben: " + SCHRAUBEN + " Einheiten");

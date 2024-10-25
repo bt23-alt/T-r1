@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=StandardtuerTest
+comment0.text=\n\ Die\ Test-Klasse\ StandardtuerTest.\n\n\ @author\ \ Gruppe\ 08\n\ @version\ 1.0\n
+comment1.params=
+comment1.target=StandardtuerTest()
+comment1.text=\n\ Konstruktor\ f\u00FCr\ die\ Test-Klasse\ StandardtuerTest.\n
+comment2.params=
+comment2.target=void\ setUp()
+comment2.text=\n\ Setzt\ das\ Testger\u00FCst\ f\u00FCr\ den\ Test.\n\ Wird\ vor\ jeder\ Testfall-Methode\ aufgerufen.\n\ Jeder\ Test\ wird\ vor\ dem\ Start\ angek\u00FCndigt.\n
+comment3.params=
+comment3.target=void\ tearDown()
+comment3.text=\n\ Gibt\ das\ Testger\u00FCst\ wieder\ frei.\n\ Wird\ nach\ jeder\ Testfall-Methode\ aufgerufen.\n\ Nachricht\ best\u00E4tigt,\ dass\ Test\ zu\ Ende\ ist.\n
+comment4.params=
+comment4.target=void\ testZustandsAenderung()
+comment5.params=
+comment5.target=void\ testKonstanteVariablen()
+numComments=6

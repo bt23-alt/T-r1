@@ -1,12 +1,12 @@
 #BlueJ class context
 comment0.target=Premiumtuer
-comment0.text=\n\ Die\ Klasse\ Premiumtuer\ gibt\ an,\ welche\ Spezifikationen\ die\ Premiumt\u00FCr\ hat.\ \n\ Zudem\ hat\ die\ Klasse\ die\ Get-Methoden,\ um\ diese\ Variablen\ abzufragen.\n\ @author\ Gruppe\ 08\n\ @version\ 1.0\n
+comment0.text=\n\ Die\ Klasse\ Premiumtuer\ gibt\ an,\ welche\ Spezifikationen\ die\ Premiumt\u00FCr\ hat.\ \n\ Zudem\ hat\ die\ Klasse\ die\ Get-Methoden,\ um\ diese\ Variablen\ abzufragen.\n\ \n\ @author\ Gruppe\ 08\n\ @version\ 1.0\n
 comment1.params=zustand
 comment1.target=Premiumtuer(int)
-comment1.text=\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Premiumtuer,\ \n\ wo\ die\ Spezifikationen\ strikt\ laut\ der\ Angabe\ angegeben\ sind.\n\ Zustand\ wird\ von\ der\ Klasse\ Produkt\ vererbt.\n
+comment1.text=\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Premiumt\u00FCr,\ \n\ wo\ die\ Spezifikationen\ strikt\ laut\ der\ Angabe\ vorgegeben\ sind.\n\ Zustand\ wird\ von\ der\ Klasse\ Produkt\ vererbt.\n\ \n\ @param\ zustand\ gibt\ den\ Zustand\ des\ Produktes\ an.\n
 comment2.params=
 comment2.target=void\ gibEinheitenPremium()
-comment2.text=\n\ Methode\ "gibEinheitenPremium"\ gibt\ an,\ welche\ genaue\ Anzahl\ an\ Holzeinheiten,\ \n\ Schrauben,\ Glaseinheiten,\ Farbeinheiten,\ Kartoneinheiten\ ben\u00F6tigt\ wird\n\ und\ wie\ lange\ die\ Produktionszeit\ f\u00FCr\ die\ Premiumtuer\ ist.\n
+comment2.text=\n\ Methode\ "gibEinheitenPremium"\ gibt\ an,\ welche\ genaue\ Anzahl\ an\ Holzeinheiten,\ \n\ Schrauben,\ Glaseinheiten,\ Farbeinheiten,\ Kartoneinheiten\ ben\u00F6tigt\ werden.\n\ und\ wie\ lange\ die\ Produktionszeit\ f\u00FCr\ die\ Premiumt\u00FCr\ ist.\n
 comment3.params=
 comment3.target=int\ gibHolzeinheiten()
 comment3.text=\n\ Methode\ "gibHolzeinheiten"\ fragt\ ab,\ welche\ Menge\ an\ Holzeinheiten\ ben\u00F6tigt\ wird.\n
@@ -24,5 +24,5 @@ comment7.target=int\ gibKartoneinheiten()
 comment7.text=\n\ Methode\ "gibKartoneinheiten"\ fragt\ ab,\ welche\ Menge\ an\ Kartoneinheiten\ ben\u00F6tigt\ wird.\n
 comment8.params=
 comment8.target=int\ gibProduktionsZeit()
-comment8.text=\n\ Methode\ "gibProduktionsZeit"\ fragt\ ab,\ wie\ Lange\ die\ Produktionszeit\ ist.\n
+comment8.text=\n\ Methode\ "gibProduktionsZeit"\ fragt\ ab,\ wie\ lange\ die\ Produktionszeit\ ist.\n
 numComments=9

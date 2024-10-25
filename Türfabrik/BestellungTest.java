@@ -15,14 +15,14 @@ public class BestellungTest
      private Bestellung bestellung;
      
     /**
-     * Konstruktor fuer die Test-Klasse BestellungTest
+     * Konstruktor für die Test-Klasse BestellungTest.
      */
     public BestellungTest()
     {
     }
 
     /**
-     * Setzt das Testgerüst fuer den Test.
+     * Setzt das Testgerüst für den Test.
      * Wird vor jeder Testfall-Methode aufgerufen.
      * Vor jedem Test wird eine Bestellung von 3 Standardtueren, und 2 Premiumtueren, 
      * mit der Bestellungsnummer 45 erstellt.
@@ -31,7 +31,7 @@ public class BestellungTest
     @BeforeEach
     public void setUp()
     {
-        // Initialisiert eine Bestellung mit 3 Standardtüren und 2 Premiumtüren, Bestellnummer 45
+        // Initialisiert eine Bestellung mit 3 Standardtüren und 2 Premiumtüren, Bestellnummer 45.
         bestellung = new Bestellung(3, 2, 45);
         System.out.println("Testlauf Bestellung Start");
         System.out.println();
@@ -46,7 +46,7 @@ public class BestellungTest
     @AfterEach
     public void tearDown()
     {
-        // Setze die Bestellung auf null
+        // Setze die Bestellung auf null.
         bestellung = null;
         System.out.println("Testlauf Bestellung Ende");
         System.out.println("------------------------");
