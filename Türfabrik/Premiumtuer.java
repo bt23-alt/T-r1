@@ -18,10 +18,10 @@ public class Premiumtuer extends Produkt
 
     /**
      * Konstruktor für Objekte der Klasse Premiumtür, 
-     * wo die Spezifikationen strikt laut der Angabe vorgegeben sind.
-     * Zustand wird von der Klasse Produkt vererbt.
+     * wo die Spezifikationen strikt laut Angabe vorgegeben sind.
+     * Zustand wird von der Klasse Produkt geerbt.
      * 
-     * @param zustand gibt den Zustand des Produktes an.
+     * @param zustand gibt den Zustand einer Premiumtür an.
      */
     public Premiumtuer(int zustand)
     {

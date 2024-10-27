@@ -1,12 +1,13 @@
 import java.util.ArrayList;
 /**
  * In der Fabrik werden Bestellungen abgearbeitet. Hier wird das Programm gestartet.
+ * 
  * @author Gruppe 08 
  * @version 1.0
  */
 public class Fabrik
 {
-    // Übersicht der erfassten Bestellungen.
+    // Array Liste der erfassten Bestellungen.
     private ArrayList<Bestellung> bestellungen;
     // bestellungsNr, die jeder Bestellung neu übergeben wird.
     private int bestellungsNr;
@@ -16,13 +17,14 @@ public class Fabrik
      */
     public Fabrik()
     {
-        // Neue Array List der Klasse Bestellung wird initialisiert
+        // Neue Array List der Klasse Bestellung wird initialisiert.
         bestellungen = new ArrayList<Bestellung>();
         this.bestellungsNr = 1;
     }
 
     /**
-     * Methode, um Bestellungen aufzugeben. Es werden nur Bestellungen mit positiven Werten akzeptiert.
+     * Methode, um Bestellungen aufzugeben. 
+     * Es werden nur Bestellungen mit positiven Werten akzeptiert.
      * Ansonsten erscheint eine Fehlermeldung. 
      * 
      * @param standardTueren Anzahl der bestellten Standardtüren. Muss positiv sein.
@@ -62,12 +64,17 @@ public class Fabrik
                 System.out.println("Bestellnummer: " + bestellung.gibBestellungsNr());
                 System.out.println("Anzahl Standardtüren: " + bestellung.gibAnzahlStandardTueren());
                 System.out.println("Anzahl Premiumtüren: " + bestellung.gibAnzahlPremiumTueren());
-                System.out.println("Bestellbestätigung: " + bestellung.gibBestellBestaetigung());
                 System.out.println("--------------------");
+                System.out.println();
             }
     }
     
-     public static void main(String[] args) {
+    /**
+     * Main Methode, um alle mehrere Bestellungen auf der Konsole auszugeben.
+     * Es wird auch die Gesamtanzahl der bestellten Standard- und Premiumtüren ausgegeben.
+     * 
+     */ 
+    public static void main(String[] args) {
         Fabrik fabrik = new Fabrik();
         fabrik.bestellungAufgeben(3, 4);
         fabrik.bestellungAufgeben(1, 2);
@@ -84,7 +91,6 @@ public class Fabrik
         }
         
         // Ausgabe der Gesamtanzahl an bestellten Standard- und Premiumtüren.
-        System.out.println();
         System.out.println("Insgesamt wurden " + totalStandardTueren + " Standardtüren bestellt.");
         System.out.println("Insgesamt wurden " + totalPremiumTueren + " Premiumtüren bestellt.");
         System.out.println();
@@ -94,7 +100,6 @@ public class Fabrik
     /**
      * Methode, die Übersicht über alle gespeicherten Bestellungen zurückgibt. 
      * Wird für den Test benutzt.
-     * 
      */
     public ArrayList<Bestellung> gibBestellungen() 
     {

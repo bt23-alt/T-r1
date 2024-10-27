@@ -18,9 +18,9 @@ public class Standardtuer extends Produkt
     /**
      * Konstruktor für Objekte der Klasse Standardtuer, 
      * wo die Spezifikationen strikt laut der Angabe vorgegeben sind.
-     * Zustand wird von der Klasse Produkt vererbt.
+     * Zustand wird von der Klasse Produkt geerbt.
      * 
-     * @param zustand gibt den Zustand des Produktes an.
+     * @param zustand gibt den Zustand einer Standardtür an.
      */
     public Standardtuer(int zustand)
     {

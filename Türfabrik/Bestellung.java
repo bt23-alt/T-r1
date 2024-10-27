@@ -8,18 +8,19 @@ import java.util.ArrayList;
  */
 public class Bestellung
 {
+    // Array Liste mit Übersicht der insgesamt bestellten Standardtüren und Premiumtüren.
     private ArrayList<Produkt> bestellteProdukte;
-    // ArrayList mit Übersicht der insgesamt bestellten Standardtüren und Premiumtüren.
-    private boolean bestellBestaetigung;
     // False, falls keine Bestellung bestätigt, ansonsten true.
-    private int beschaffungsZeit;
+    private boolean bestellBestaetigung;
     // Beschaffungszeit
+    private int beschaffungsZeit;
+    // Wieviele Standardtüren sind in einer Bestellung enhtalten.
     private int anzahlStandardTueren;
-     // Wieviele Standardtüren sind in einer Bestellung enhtalten.
+    // Wieviele Premiumtüren sind in einer Bestellung enhtalten.
     private int anzahlPremiumTueren;
-     // Wieviele Premiumtüren sind in einer Bestellung enhtalten.
-    private int bestellungsNr;
     // Welche Bestellungsnummer hat die Bestellung.
+    private int bestellungsNr;
+    
     /**
      * Konstruktor für Objekte der Klasse Bestellung.
      * 
@@ -29,7 +30,7 @@ public class Bestellung
      */
     public Bestellung(int anzahlStandardTueren, int anzahlPremiumTueren, int bestellungsNr)
     {
-        // Instanzvariable initialisieren
+        // Neue Bestellung mit Instanzvariablen wird initialisiert.
         this.bestellteProdukte = new ArrayList<Produkt>();
         this.bestellBestaetigung = false;
         this.beschaffungsZeit = 0;
@@ -56,6 +57,8 @@ public class Bestellung
     
     /**
      * Methode, um BeschaffunsZeit zu setzen.
+     * 
+     * @param zeit gibt Beschaffungszeit für Bestellung an.
      */
     public void setzeBeschaffungsZeit(int zeit)
     {

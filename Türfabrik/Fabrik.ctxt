@@ -1,18 +1,19 @@
 #BlueJ class context
 comment0.target=Fabrik
-comment0.text=\n\ In\ der\ Fabrik\ werden\ Bestellungen\ abgearbeitet.\ Hier\ wird\ das\ Programm\ gestartet.\n\ @author\ Gruppe\ 08\ \n\ @version\ 1.0\n
+comment0.text=\n\ In\ der\ Fabrik\ werden\ Bestellungen\ abgearbeitet.\ Hier\ wird\ das\ Programm\ gestartet.\n\ \n\ @author\ Gruppe\ 08\ \n\ @version\ 1.0\n
 comment1.params=
 comment1.target=Fabrik()
 comment1.text=\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Fabrik.\n
 comment2.params=standardTueren\ premiumTueren
 comment2.target=void\ bestellungAufgeben(int,\ int)
-comment2.text=\n\ Methode,\ um\ Bestellungen\ aufzugeben.\ Es\ werden\ nur\ Bestellungen\ mit\ positiven\ Werten\ akzeptiert.\n\ Ansonsten\ erscheint\ eine\ Fehlermeldung.\ \n\ \n\ @param\ standardTueren\ Anzahl\ der\ bestellten\ Standardt\u00FCren.\ Muss\ positiv\ sein.\n\ @param\ premiumTueren\ Anzahl\ der\ bestellten\ Premiumt\u00FCren.\ Muss\ positiv\ sein.\n
+comment2.text=\n\ Methode,\ um\ Bestellungen\ aufzugeben.\ \n\ Es\ werden\ nur\ Bestellungen\ mit\ positiven\ Werten\ akzeptiert.\n\ Ansonsten\ erscheint\ eine\ Fehlermeldung.\ \n\ \n\ @param\ standardTueren\ Anzahl\ der\ bestellten\ Standardt\u00FCren.\ Muss\ positiv\ sein.\n\ @param\ premiumTueren\ Anzahl\ der\ bestellten\ Premiumt\u00FCren.\ Muss\ positiv\ sein.\n
 comment3.params=
 comment3.target=void\ bestellungAusgeben()
 comment3.text=\n\ Methode,\ um\ alle\ Bestellungen\ auf\ der\ Konsole\ auszugeben.\n\n
 comment4.params=args
 comment4.target=void\ main(java.lang.String[])
+comment4.text=\n\ Main\ Methode,\ um\ alle\ mehrere\ Bestellungen\ auf\ der\ Konsole\ auszugeben.\n\ Es\ wird\ auch\ die\ Gesamtanzahl\ der\ bestellten\ Standard-\ und\ Premiumt\u00FCren\ ausgegeben.\n\ \n
 comment5.params=
 comment5.target=java.util.ArrayList\ gibBestellungen()
-comment5.text=\n\ Methode,\ die\ \u00DCbersicht\ \u00FCber\ alle\ gespeicherten\ Bestellungen\ zur\u00FCckgibt.\ \n\ Wird\ f\u00FCr\ den\ Test\ benutzt.\n\ \n
+comment5.text=\n\ Methode,\ die\ \u00DCbersicht\ \u00FCber\ alle\ gespeicherten\ Bestellungen\ zur\u00FCckgibt.\ \n\ Wird\ f\u00FCr\ den\ Test\ benutzt.\n
 numComments=6
