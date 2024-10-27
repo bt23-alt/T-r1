@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 /**
  * Die Test-Klasse StandardtuerTest.
  *
- * @author  Gruppe 08
+ * @author Gruppe 08
  * @version 1.0
  */
 public class StandardtuerTest

@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=FabrikTest
-comment0.text=\n\ Die\ Test-Klasse\ FabrikTest,\ um\ die\ Klasse\ Fabrik\ zu\ \u00FCberpr\u00FCfen.\n\ \n\ @author\ \ Gruppe\ 08\n\ @version\ 1.0\n
+comment0.text=\n\ Die\ Test-Klasse\ FabrikTest,\ um\ die\ Klasse\ Fabrik\ zu\ \u00FCberpr\u00FCfen.\n\ \n\ @author\ Gruppe\ 08\n\ @version\ 1.0\n
 comment1.params=
 comment1.target=FabrikTest()
 comment1.text=\n\ Konstruktor\ f\u00FCr\ die\ Test-Klasse\ FabrikTest.\n
