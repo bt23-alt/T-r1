@@ -49,7 +49,7 @@ public class PremiumtuerTest
     public void testZustandsAenderung() 
     {
         // Arrange: Erstelle eine neue Premiumtür mit dem Zustand 1.
-        premiumtuer = new Premiumtuer(1);
+        premiumtuer = new Premiumtuer();
         
         // Act: Ändere den Zustand auf 2.
         premiumtuer.zustandAendern(2);
@@ -62,15 +62,15 @@ public class PremiumtuerTest
     public void testKonstanteVariablen() 
     {
         // Arrange: Erstelle zwei neue Premiumtüren mit den Zuständen 3 sowie 5.
-        Premiumtuer premiumtuer1 = new Premiumtuer(3);
-        Premiumtuer premiumtuer2 = new Premiumtuer(5);
+        Premiumtuer premiumtuer1 = new Premiumtuer();
+        Premiumtuer premiumtuer2 = new Premiumtuer();
         
         // Act: Gebe die Einheiten der beiden Premiumtüren aus.
         premiumtuer1.gibEinheitenPremium();
         premiumtuer2.gibEinheitenPremium();
         
         // Assert: Premiumtür 1 sollte die kontanten Instanzvariablen haben.
-        assertEquals(3, premiumtuer1.aktuellerZustand());
+        assertEquals(0, premiumtuer1.aktuellerZustand());
         assertEquals(4, premiumtuer1.gibHolzeinheiten());
         assertEquals(5, premiumtuer1.gibSchrauben());
         assertEquals(5, premiumtuer1.gibGlaseinheiten());
@@ -80,7 +80,7 @@ public class PremiumtuerTest
         
         // Assert: Premiumtür 2 sollte dieselben kontanten Instanzvariablen haben.
         // Nur der Zustand sollte verschieden sein.
-        assertEquals(5, premiumtuer2.aktuellerZustand());
+        assertEquals(0, premiumtuer2.aktuellerZustand());
         assertEquals(4, premiumtuer2.gibHolzeinheiten());
         assertEquals(5, premiumtuer2.gibSchrauben());
         assertEquals(5, premiumtuer2.gibGlaseinheiten());

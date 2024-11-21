@@ -1,5 +1,4 @@
 
-
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -49,8 +48,8 @@ public class StandardtuerTest
     @Test
     public void testZustandsAenderung() 
     {
-        // Arrange: Erstelle eine neue Standardtür mit dem Zustand 3.
-        standardtuer = new Standardtuer(3);
+        // Arrange: Erstelle eine neue Standardtür.
+        standardtuer = new Standardtuer();
         
         // Act: Ändere den Zustand auf 1.
         standardtuer.zustandAendern(1);
@@ -62,16 +61,16 @@ public class StandardtuerTest
     @Test
     public void testKonstanteVariablen() 
     {
-        // Arrange: Erstelle zwei neue Premiumtüren mit den Zuständen 2 sowie 4.
-        Standardtuer standardtuer1 = new Standardtuer(2);
-        Standardtuer  standardtuer2 = new Standardtuer(4);
+        // Arrange: Erstelle zwei neue Premiumtüren.
+        Standardtuer standardtuer1 = new Standardtuer();
+        Standardtuer  standardtuer2 = new Standardtuer();
         
         // Act: Gebe die Einheiten der beiden Standardtüren aus.
         standardtuer1.gibEinheitenStandard();
         standardtuer2.gibEinheitenStandard();
         
         // Assert: Standardtür 1 sollte die kontanten Instanzvariablen haben.
-        assertEquals(2, standardtuer1.aktuellerZustand());
+        assertEquals(0, standardtuer1.aktuellerZustand());
         assertEquals(2, standardtuer1.gibHolzeinheiten());
         assertEquals(10, standardtuer1.gibSchrauben());
         assertEquals(2, standardtuer1.gibFarbeinheiten());
@@ -80,7 +79,7 @@ public class StandardtuerTest
         
         // Assert: Standardtür 2 sollte dieselben kontanten Instanzvariablen haben.
         // Nur der Zustand sollte verschieden sein.
-        assertEquals(4, standardtuer2.aktuellerZustand());
+        assertEquals(0, standardtuer2.aktuellerZustand());
         assertEquals(2, standardtuer2.gibHolzeinheiten());
         assertEquals(10, standardtuer2.gibSchrauben());
         assertEquals(2, standardtuer2.gibFarbeinheiten());

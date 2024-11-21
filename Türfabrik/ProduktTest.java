@@ -52,21 +52,21 @@ public class ProduktTest
     public void testAktuellerZustand() 
     {
         // Arrange: Ein Produkt mit dem Zustand 1 wird erstellt.
-        produkt1 = new Produkt(1);
+        produkt1 = new Produkt();
         
         // Act: Aktueller Zustand soll auf Konsole angezeigt werden.
         produkt1.aktuellerZustand();
         
         // Assert: Überprüfen, ob der aktuelle Zustand korrekt ist
-        // Der aktuelle Zustand sollte 1 sein.
-        assertEquals(1, produkt1.aktuellerZustand());
+        // Der aktuelle Zustand sollte 0 sein.
+        assertEquals(0, produkt1.aktuellerZustand());
     }
     
     @Test
     public void testZustandAendern() 
     {
-        // Arrange: Ein Produkt mit dem Zustand 2 wird erstellt.
-        produkt1 = new Produkt(2);
+        // Arrange: Ein neues Produkt wird erstellt.
+        produkt1 = new Produkt();
         
         // Act: Ändere den Zustand des Produkts auf 3.
         produkt1.zustandAendern(3);

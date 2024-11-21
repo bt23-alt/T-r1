@@ -42,6 +42,10 @@ public class Fabrik
             System.out.println("Die Anzahl der Türen muss positiv sein.");
             System.out.println("");
         }
+        else if (standardTueren > 10_000 || premiumTueren > 10_000) {
+            System.out.println("\nBestellmenge ist zu gross. Maximal 10 Tausend pro Artikel.");
+            System.out.println("");
+        }
         // Bestellung wurde richitg eingegeben und eine neue Bestellung mit neuer Bestellungsnummer hinzugefügt.
         else {
             Bestellung neueBestellung = new Bestellung(standardTueren, premiumTueren, bestellungsNr);
@@ -57,13 +61,15 @@ public class Fabrik
      */
     public void bestellungAusgeben() {
         // Hier ist die Logik implementiert, um die Details aller Bestellungen abzufragen.
-        System.out.println("Folgende Bestellungen wurden aufgegeben:");
+        System.out.println("Folgende Bestellungen wurden in der Fabrik gerade aufgegeben:");
         System.out.println("");
         
             for (Bestellung bestellung : bestellungen) {
                 System.out.println("Bestellnummer: " + bestellung.gibBestellungsNr());
                 System.out.println("Anzahl Standardtüren: " + bestellung.gibAnzahlStandardTueren());
                 System.out.println("Anzahl Premiumtüren: " + bestellung.gibAnzahlPremiumTueren());
+                System.out.println("Beschaffungszeit: " + bestellung.gibBeschaffungsZeit());
+                System.out.println("Bestellbestätigung: " + bestellung.gibBestellBestaetigung());
                 System.out.println("--------------------");
                 System.out.println();
             }
@@ -72,7 +78,6 @@ public class Fabrik
     /**
      * Main Methode, um alle mehrere Bestellungen auf der Konsole auszugeben.
      * Es wird auch die Gesamtanzahl der bestellten Standard- und Premiumtüren ausgegeben.
-     * 
      */ 
     public static void main(String[] args) {
         Fabrik fabrik = new Fabrik();
@@ -100,9 +105,11 @@ public class Fabrik
     /**
      * Methode, die Übersicht über alle gespeicherten Bestellungen zurückgibt. 
      * Wird für den Test benutzt.
+     * 
+     * @return bestellteProdukte wird retourniert
      */
     public ArrayList<Bestellung> gibBestellungen() 
     {
-        return bestellungen;
+        return this.bestellungen;
     }
 }

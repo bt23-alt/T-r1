@@ -20,13 +20,11 @@ public class Premiumtuer extends Produkt
      * Konstruktor für Objekte der Klasse Premiumtür, 
      * wo die Spezifikationen strikt laut Angabe vorgegeben sind.
      * Zustand wird von der Klasse Produkt geerbt.
-     * 
-     * @param zustand gibt den Zustand einer Premiumtür an.
      */
-    public Premiumtuer(int zustand)
+    public Premiumtuer()
     {
         // Zustand wird von der Klasse Produkt geerbt.
-        super(zustand);
+        super();
     }
     
     /**
@@ -34,7 +32,7 @@ public class Premiumtuer extends Produkt
      * Schrauben, Glaseinheiten, Farbeinheiten, Kartoneinheiten benötigt werden.
      * und wie lange die Produktionszeit für die Premiumtür ist.
      */
-    public void gibEinheitenPremium()
+    public static void gibEinheitenPremium()
     {
         System.out.println("Die Premiumtür benötigt die folgenden Materialen: ");
         System.out.println("Holz: " + HOLZEINHEITEN + " Einheiten");
@@ -48,8 +46,10 @@ public class Premiumtuer extends Produkt
     
     /**
      * Methode "gibHolzeinheiten" fragt ab, welche Menge an Holzeinheiten benötigt wird.
+     * 
+     * @return HOLZEINHEITEN
      */
-    public int gibHolzeinheiten()
+    public static int gibHolzeinheiten()
     {
         // tragen Sie hier den Code ein
         return HOLZEINHEITEN;
@@ -57,8 +57,10 @@ public class Premiumtuer extends Produkt
     
     /**
      * Methode "gibSchrauben" fragt ab, welche Menge an Schrauben benötigt wird.
+     * 
+     * @return SCHRAUBEN
      */
-    public int gibSchrauben()
+    public static int gibSchrauben()
     {
         // tragen Sie hier den Code ein
         return SCHRAUBEN;
@@ -66,8 +68,10 @@ public class Premiumtuer extends Produkt
     
     /**
      * Methode "gibGlaseinheiten" fragt ab, welche Menge an Glaseinheiten benötigt wird.
+     * 
+     * @return GLASEINHEITEN
      */
-    public int gibGlaseinheiten()
+    public static int gibGlaseinheiten()
     {
         // tragen Sie hier den Code ein
         return GLASEINHEITEN;
@@ -75,8 +79,10 @@ public class Premiumtuer extends Produkt
     
     /**
      * Methode "gibFarbeinheiten" fragt ab, welche Menge an Farbeinheiten benötigt wird.
+     * 
+     * @return FARBEINHEITEN
      */
-    public int gibFarbeinheiten()
+    public static int gibFarbeinheiten()
     {
         // tragen Sie hier den Code ein
         return FARBEINHEITEN;
@@ -84,8 +90,10 @@ public class Premiumtuer extends Produkt
     
     /**
      * Methode "gibKartoneinheiten" fragt ab, welche Menge an Kartoneinheiten benötigt wird.
+     * 
+     * @return KARTONEINHEITEN
      */
-    public int gibKartoneinheiten()
+    public static int gibKartoneinheiten()
     {
         // tragen Sie hier den Code ein
         return KARTONEINHEITEN;
@@ -93,8 +101,10 @@ public class Premiumtuer extends Produkt
     
     /**
      * Methode "gibProduktionsZeit" fragt ab, wie lange die Produktionszeit ist.
+     * 
+     * @return PRODUKTIONSZEIT
      */
-    public int gibProduktionsZeit()
+    public static int gibProduktionsZeit()
     {
         // tragen Sie hier den Code ein
         return PRODUKTIONSZEIT;
